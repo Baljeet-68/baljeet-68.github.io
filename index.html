@@ -3,20 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baljeet Singh Saini — Resume</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+  <title>Baljeet Singh Saini — Technical Project Manager</title>
   <style>
-    /* ── Exact PDF colours ── */
     :root {
       --orange: #B45F06;
       --body:   #666666;
       --sep:    #D9D9D9;
       --cream:  #FFF2E2;
       --white:  #FFFFFF;
-      --font-h: 'Montserrat', Arial, sans-serif;
-      --font-b: 'Roboto', Arial, sans-serif;
+      --font-h: 'Cambria', Georgia, serif;
+      --font-b: 'Times New Roman', Times, serif;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -28,7 +24,6 @@
       print-color-adjust: exact;
     }
 
-    /* ══ A4 PAGE — fixed size, no overflow ══ */
     .page {
       width:  210mm;
       height: 297mm;
@@ -41,13 +36,9 @@
     }
     .page + .page { margin-top: 6mm; }
 
-    /* ── Columns ── */
     .main    { background: var(--white); padding: 10mm 7mm 8mm 12mm; overflow: hidden; }
     .sidebar { background: var(--cream); padding: 10mm 6mm 8mm 6mm;  overflow: hidden; }
 
-    /* ══ TYPOGRAPHY ══ */
-
-    /* Name */
     .name {
       font-family: var(--font-h);
       font-size: 22pt;
@@ -62,11 +53,9 @@
       color: var(--body);
       margin-bottom: 5pt;
     }
-    /* Underscore separator — matches template exactly */
     .usep-short { display:block; font-family:var(--font-b); font-weight:300; font-size:9pt; color:var(--sep); letter-spacing:-1px; margin-bottom:6pt; }
     .usep-long  { display:block; font-family:var(--font-b); font-weight:300; font-size:9pt; color:var(--sep); letter-spacing:-1px; margin-bottom:6pt; }
 
-    /* Main section header */
     .sec-head {
       font-family: var(--font-h);
       font-size: 8.5pt;
@@ -79,15 +68,22 @@
     }
     .sec-head:first-child { margin-top: 0; }
 
-    /* Summary */
     .summary {
       font-size: 8.3pt;
       color: var(--body);
-      line-height: 1.58;
+      line-height: 1.15;
+      text-align: justify;
     }
     .summary strong { color: #444; font-weight: 700; }
 
-    /* ── Job block ── */
+    .kw-line {
+      display: block;
+      font-size: 7.8pt;
+      color: #999;
+      font-style: italic;
+      margin-top: 4pt;
+    }
+
     .job { margin-bottom: 6pt; }
 
     .job-top {
@@ -134,27 +130,15 @@
       font-style: italic;
       white-space: nowrap;
     }
-    .promo-tag {
-      display: inline-block;
-      font-size: 6.8pt;
-      font-weight: 700;
-      color: #7a5000;
-      background: #fff3cd;
-      border: 1px solid #f5c840;
-      padding: 0.5pt 5pt;
-      border-radius: 3px;
-      margin-bottom: 2.5pt;
-    }
 
-    /* Bullet list */
     .blist { list-style: none; }
     .blist li {
       font-size: 8pt;
       color: var(--body);
-      line-height: 1.52;
+      line-height: 1.15;
       padding-left: 11pt;
       position: relative;
-      margin-bottom: 2pt;
+      margin-bottom: 1.5pt;
     }
     .blist li::before {
       content: "●";
@@ -166,28 +150,20 @@
     }
     .blist li strong { color: #444; font-weight: 700; }
 
-    /* Previous experience rows */
-    .prev-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      gap: 3pt;
-      padding: 2.5pt 0;
-      border-bottom: 1px solid #efefef;
-    }
-    .prev-row:last-child { border-bottom: none; }
-    .prev-role { font-family: var(--font-h); font-size: 8.3pt; font-weight: 600; color: #444; }
-    .prev-co   { font-size: 7.5pt; color: var(--body); }
-    .prev-date { font-size: 7.5pt; color: var(--body); font-style: italic; white-space: nowrap; }
-
-    /* Project 2×2 grid */
     .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4pt 10mm; }
     .proj-name  { font-family: var(--font-h); font-size: 8.3pt; font-weight: 700; color: #333; }
     .proj-badge { font-size: 6.8pt; color: var(--orange); font-style: italic; font-weight: 400; }
-    .proj-stack { font-size: 7.2pt; color: #aaa; font-style: italic; margin-bottom: 1.5pt; }
+    .proj-stack { font-size: 7.2pt; color: #aaa; font-style: italic; margin-bottom: 1pt; }
+    .proj-meta  { font-size: 7pt; color: #999; margin-bottom: 1.5pt; }
     .proj-link  { font-size: 7.2pt; color: var(--orange); text-decoration: none; }
 
-    /* ══ SIDEBAR TYPOGRAPHY ══ */
+    .mfg-intro {
+      font-size: 7.8pt;
+      color: #999;
+      font-style: italic;
+      line-height: 1.15;
+      margin-bottom: 5pt;
+    }
 
     .sb-head {
       font-family: var(--font-h);
@@ -202,21 +178,19 @@
     .sb-head:first-child { margin-top: 0; }
     .sb-sep { display:block; font-family:var(--font-b); font-weight:300; font-size:7.5pt; color:var(--sep); letter-spacing:-1px; margin-bottom:5pt; }
 
-    /* Contact rows */
     .ct-row {
       display: flex;
       align-items: flex-start;
       gap: 4pt;
       font-size: 7.8pt;
       color: var(--body);
-      line-height: 1.5;
-      margin-bottom: 3.5pt;
+      line-height: 1.15;
+      margin-bottom: 3pt;
     }
     .ct-row svg { flex-shrink: 0; margin-top: 1.5pt; opacity: .55; }
     .ct-row a { color: var(--orange); text-decoration: none; word-break: break-all; }
 
-    /* Skills */
-    .sk-cat { margin-bottom: 5pt; }
+    .sk-cat { margin-bottom: 4pt; }
     .sk-cat-lbl { font-family: var(--font-h); font-size: 7.5pt; font-weight: 700; color: #444; margin-bottom: 2pt; }
     .sk-list { list-style: none; }
     .sk-list li {
@@ -224,40 +198,35 @@
       color: var(--body);
       padding-left: 8pt;
       position: relative;
-      line-height: 1.6;
+      line-height: 1.15;
     }
     .sk-list li::before { content: "•"; color: var(--orange); position: absolute; left: 0; font-weight: 700; }
 
-    /* Education */
     .edu-inst { font-family: var(--font-h); font-size: 8pt; font-weight: 700; color: #444; }
     .edu-deg  { font-size: 7.8pt; font-weight: 500; color: var(--orange); margin-top: 1.5pt; }
-    .edu-meta { font-size: 7.2pt; color: var(--body); margin-top: 1pt; line-height: 1.5; }
+    .edu-meta { font-size: 7.2pt; color: var(--body); margin-top: 1pt; line-height: 1.15; }
 
-    /* Cert / other items */
     .cert-item {
       font-size: 7.8pt; color: var(--body);
       padding-left: 8pt; position: relative;
-      line-height: 1.55; margin-bottom: 3pt;
+      line-height: 1.15; margin-bottom: 4pt;
     }
     .cert-item::before { content: "●"; font-size: 4pt; color: var(--orange); position: absolute; left: 0; top: 3.5pt; }
     .cert-item strong { color: #444; }
 
-    /* Award items */
     .award-item {
       font-size: 7.8pt; color: var(--body);
       padding-left: 9pt; position: relative;
-      line-height: 1.55; margin-bottom: 3pt;
+      line-height: 1.15; margin-bottom: 3pt;
     }
     .award-item::before { content: "★"; font-size: 6.5pt; color: var(--orange); position: absolute; left: 0; top: 1pt; }
     .award-item strong { color: #444; }
 
-    /* Portfolio link items */
     .port-item { margin-bottom: 4pt; }
     .port-name  { font-family: var(--font-h); font-size: 7.8pt; font-weight: 700; color: #444; }
     .port-stack { font-size: 7.2pt; color: #aaa; font-style: italic; }
     .port-link  { font-size: 7.2pt; color: var(--orange); text-decoration: none; word-break: break-all; }
 
-    /* Print */
     @media print {
       body { background: #fff; }
       .page { margin: 0; box-shadow: none; page-break-after: always; }
@@ -278,18 +247,19 @@
 
     <!-- NAME & TITLE -->
     <div class="name">Baljeet Singh Saini</div>
-    <div class="job-title">Technical Project Manager &nbsp;·&nbsp; QA Lead &nbsp;·&nbsp; AI-Assisted Developer</div>
+    <div class="job-title">Technical Project Manager &nbsp;|&nbsp; Agile Delivery &nbsp;|&nbsp; Cross-Functional Leadership</div>
     <span class="usep-short">__________________________</span>
 
     <!-- SUMMARY -->
     <div class="sec-head">Professional Summary</div>
     <span class="usep-long">_______________________________________________________________________</span>
     <p class="summary">
-      Results-driven <strong>Technical Project Manager and QA Lead</strong> with <strong>4 years of experience</strong> spanning software delivery and quality assurance across mobile, web, and SaaS platforms. <strong>Promoted to Technical Project Manager within 6 months</strong> of joining MMF Infotech — recognised for exceptional leadership and delivery ownership. Proven track record managing <strong>10–15 concurrent programs</strong> with <strong>95% on-time delivery</strong>, leading teams of <strong>20+</strong>, and performing final release testing and QA sign-off. Skilled in Agile execution, stakeholder management, and AI-assisted development.
+      Technical Project Manager with <strong>4+ years of experience</strong> spanning manufacturing operations and IT project delivery. Background in production planning and manufacturing PMO before transitioning to IT in 2022 — bringing a structured, process-driven approach to software delivery. At MMF Infotech, managing client engagements across mobile, web, and e-commerce platforms for international clients across <strong>US, UK, Europe, and APAC</strong>. Skilled in Agile execution, stakeholder alignment, risk and dependency management, and cross-functional team coordination.
+      <em class="kw-line">Agile &nbsp;·&nbsp; Scrum &nbsp;·&nbsp; Stakeholder Mgmt &nbsp;·&nbsp; Release Mgmt &nbsp;·&nbsp; QA Coordination</em>
     </p>
 
-    <!-- WORK EXPERIENCE -->
-    <div class="sec-head">Work Experience</div>
+    <!-- EXPERIENCE -->
+    <div class="sec-head">Experience</div>
     <span class="usep-long">_______________________________________________________________________</span>
 
     <!-- MMF Infotech -->
@@ -302,18 +272,17 @@
 
       <!-- Role 1: TPM -->
       <div class="role-row">
-        <span class="role-title">Technical Project Manager &amp; QA Lead</span>
+        <span class="role-title">Technical Project Manager</span>
         <span class="role-date">Mar 2023 – Present</span>
       </div>
       <ul class="blist">
-        <li>Directed end-to-end delivery of <strong>40+ mobile, web, and e-commerce solutions</strong>, ensuring scalability, performance, and alignment with business objectives.</li>
-        <li>Managed <strong>10–15 concurrent projects</strong> achieving <strong>95% on-time delivery rate</strong>, improving predictability and stakeholder confidence.</li>
-        <li>Built and led cross-functional teams of <strong>20+ engineers, designers, and QA professionals</strong> — driving Agile adoption, sprint optimisation, and delivery quality.</li>
-        <li>Facilitated all Agile ceremonies — sprint planning, backlog grooming, daily standups, sprint reviews, and retrospectives; owned dependency management and roadmap planning.</li>
-        <li>Served as primary contact for international clients across <strong>US, UK, Canada, Europe, and APAC</strong>, translating requirements into roadmaps aligned to OKRs and KPIs.</li>
-        <li>Improved client satisfaction by <strong>20%</strong>, contributing to repeat engagements and long-term partnerships.</li>
-        <li>Performed final release testing and quality sign-off; stepped in to unblock QA team, ensuring <strong>zero critical defects</strong> at launch.</li>
-        <li>Implemented AI-powered reporting and automation workflows, reducing manual effort and accelerating decision cycles.</li>
+        <li>Owned sprint planning, backlog grooming, and release scheduling across concurrent client projects — managing the full <strong>Software Development Life Cycle (SDLC)</strong> from kickoff through production deployment.</li>
+        <li>Coordinated cross-functional teams of developers, designers, and QA engineers across mobile, web, and e-commerce projects — running all Agile ceremonies including sprint reviews, retrospectives, and daily standups.</li>
+        <li>Served as primary stakeholder contact for international clients across <strong>US, UK, Europe, and APAC</strong> — translating requirements into roadmaps aligned to <strong>Objectives and Key Results (OKRs)</strong> and KPIs.</li>
+        <li>Drove risk and dependency management across parallel workstreams — identifying blockers early to maintain delivery cadence and protect client commitments.</li>
+        <li>Owned final QA sign-off and release testing across all client deliverables, ensuring zero critical defects at production release.</li>
+        <li>Implemented <strong>AI workflow automation</strong> and LLM-integrated reporting, reducing manual status effort and accelerating sprint decision cycles.</li>
+        <li>Maintained long-term client relationships through consistent delivery and proactive communication — contributing to repeat engagements and client retention.</li>
       </ul>
 
       <!-- Role 2: QA Engineer -->
@@ -321,10 +290,9 @@
         <span class="role-title">QA Engineer</span>
         <span class="role-date">Sep 2022 – Feb 2023</span>
       </div>
-      <div style="margin-bottom:2pt;"><span class="promo-tag">↑ Promoted to Technical Project Manager within 6 months</span></div>
       <ul class="blist">
-        <li>Executed functional, regression, smoke, and UI testing across live mobile and web projects, identifying critical defects before production releases.</li>
-        <li>Authored detailed test plans, test cases, and defect reports — establishing documentation practices later adopted team-wide.</li>
+        <li>Executed functional, regression, smoke, and <strong>Postman API testing</strong> across live mobile and web projects — identifying critical defects before production releases.</li>
+        <li>Authored test plans, test cases, and defect tracking reports; documentation practices subsequently adopted team-wide.</li>
       </ul>
     </div>
 
@@ -338,9 +306,8 @@
         <span class="role-title">Quality Assurance Intern</span>
       </div>
       <ul class="blist">
-        <li>Performed manual testing for a live cryptocurrency platform ensuring transaction accuracy and business logic integrity.</li>
-        <li>Designed and executed functional, regression, and UI test cases — improving product stability ahead of release.</li>
-        <li>Proposed UX improvements for web applications, enhancing usability prior to launch.</li>
+        <li>Performed manual testing for a live cryptocurrency platform — ensuring transaction accuracy and business logic integrity.</li>
+        <li>Designed functional, regression, and UI test cases; contributed to improving product stability ahead of release.</li>
       </ul>
     </div>
 
@@ -354,15 +321,15 @@
 
     <div class="ct-row">
       <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-      <span>Indore, MP, India<br>Open to Remote &amp; Relocation</span>
+      <span>Indore, MP, India<br>Open to Remote / Hybrid / Relocation</span>
     </div>
     <div class="ct-row">
       <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.82 19.79 19.79 0 01.07 1.18 2 2 0 012.03 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      +91-7566148768
+      +91 75661 48768
     </div>
     <div class="ct-row">
       <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      <a href="mailto:Baljeetsaini.68@gmail.com">Baljeetsaini.68@gmail.com</a>
+      <a href="mailto:baljeetsaini.68@gmail.com">baljeetsaini.68@gmail.com</a>
     </div>
     <div class="ct-row">
       <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
@@ -377,49 +344,58 @@
       <a href="https://baljeet-68.github.io" target="_blank">baljeet-68.github.io</a>
     </div>
 
-    <div class="sb-head">Skills</div>
+    <div class="sb-head">Core Competencies</div>
     <span class="sb-sep">__________________________</span>
 
     <div class="sk-cat">
-      <div class="sk-cat-lbl">PM &amp; Delivery:</div>
+      <div class="sk-cat-lbl">Project &amp; Program Management:</div>
       <ul class="sk-list">
-        <li>Program &amp; Project Management</li>
-        <li>Agile / Scrum Execution</li>
-        <li>Dependency &amp; Release Mgmt</li>
-        <li>OKRs, KPIs &amp; Roadmap Planning</li>
+        <li>Agile / Scrum Methodology</li>
+        <li>Sprint Planning &amp; Backlog Grooming</li>
+        <li>OKRs, KPIs &amp; Roadmapping</li>
+        <li>Risk &amp; Dependency Management</li>
+        <li>Release Management</li>
         <li>Stakeholder Communication</li>
-        <li>Cross-functional Team Leadership</li>
+        <li>Cross-Functional Leadership</li>
+        <li>SDLC Ownership</li>
       </ul>
     </div>
 
     <div class="sk-cat">
-      <div class="sk-cat-lbl">QA &amp; Testing:</div>
-      <ul class="sk-list">
-        <li>Manual &amp; Regression Testing</li>
-        <li>Smoke, Sanity &amp; UAT</li>
-        <li>AI-Assisted QA (Cypress)</li>
-        <li>API Testing · Selenium</li>
-        <li>Test Planning &amp; Sign-off</li>
-        <li>Shift-Left Testing</li>
-      </ul>
-    </div>
-
-    <div class="sk-cat">
-      <div class="sk-cat-lbl">Tools &amp; Platforms:</div>
+      <div class="sk-cat-lbl">PM Tools:</div>
       <ul class="sk-list">
         <li>JIRA · Confluence · ClickUp</li>
-        <li>GitHub Actions · AWS EC2/S3</li>
+        <li>Notion · Slack</li>
+      </ul>
+    </div>
+
+    <div class="sk-cat">
+      <div class="sk-cat-lbl">QA &amp; Testing (Supporting):</div>
+      <ul class="sk-list">
+        <li>Manual &amp; Regression Testing</li>
+        <li>Postman API Testing</li>
+        <li>UAT &amp; Test Sign-off</li>
+        <li>Defect Tracking</li>
+      </ul>
+    </div>
+
+    <div class="sk-cat">
+      <div class="sk-cat-lbl">Tech Familiarity:</div>
+      <ul class="sk-list">
         <li>Flutter · React.js · Node.js</li>
-        <li>Firebase · MySQL · Shopify</li>
-        <li>Figma · HTML5 · CSS3 · JS</li>
+        <li>Firebase · MySQL</li>
+        <li>AWS (EC2/S3) · GitHub Actions</li>
+        <li>Shopify</li>
       </ul>
     </div>
 
     <div class="sk-cat">
       <div class="sk-cat-lbl">AI &amp; Automation:</div>
       <ul class="sk-list">
-        <li>Claude Code (AI-Assisted Dev)</li>
-        <li>ChatGPT · Gemini · Notion AI</li>
+        <li>AI Workflow Automation</li>
+        <li>Prompt Engineering</li>
+        <li>LLM-Integrated Reporting</li>
+        <li>Claude Code · ChatGPT · Gemini</li>
       </ul>
     </div>
 
@@ -428,26 +404,28 @@
       <ul class="sk-list">
         <li>Punjabi (Native)</li>
         <li>Hindi (Native)</li>
-        <li>English (Professional Working)</li>
+        <li>English (Professional)</li>
       </ul>
     </div>
 
-    <!-- CERTIFICATION -->
-    <div class="sb-head">Certification</div>
+    <div class="sb-head">Certifications</div>
     <span class="sb-sep">__________________________</span>
     <div class="cert-item">
       <strong>Google Project Management Certificate</strong><br>
-      Agile · Scrum · Risk Management ·<br>Stakeholder Communication<br>
       Google via Coursera · Sep 2025<br>
       <span style="font-size:7pt; color:#aaa;">ID: W8S5SN68E9DB</span>
     </div>
+    <div class="cert-item">
+      <strong>Certified Scrum Master (CSM)</strong><br>
+      <em>In progress — target Q3 2026</em>
+    </div>
 
-    <!-- AWARDS -->
     <div class="sb-head">Awards &amp; Recognition</div>
     <span class="sb-sep">___________________________</span>
-    <div class="award-item">Promoted QA Specialist → TPM in <strong>6 months</strong> — exceptional leadership &amp; delivery ownership.</div>
-    <div class="award-item">Cash incentive bonuses for consistently delivering projects <strong>ahead of schedule</strong>.</div>
+    <div class="award-item">Promoted from <strong>QA Engineer to Technical Project Manager within 6 months</strong> at MMF Infotech — recognised for delivery ownership and leadership.</div>
+    <div class="award-item">Fast-track performance increments within <strong>6 months</strong> at Mittal Coin and Signet Industries for operational excellence.</div>
     <div class="award-item"><strong>3× Silver Coins</strong> for Kaizen process improvement contributions.</div>
+    <div class="award-item">Performance-based cash incentives for consistent on-time client delivery.</div>
 
   </aside>
 </div><!-- /page 1 -->
@@ -461,94 +439,123 @@
   <!-- ── Page 2 · Left Main ── -->
   <main class="main" style="padding-top:10mm;">
 
-    <!-- KEY PROJECTS -->
-    <div class="sec-head" style="margin-top:0;">Key Projects Managed</div>
+    <!-- CLIENT PROJECTS -->
+    <div class="sec-head" style="margin-top:0;">Client Projects Managed</div>
     <span class="usep-long">_______________________________________________________________________</span>
 
     <div class="proj-grid">
 
       <div>
-        <div class="proj-name">Affirmare &nbsp;<span class="proj-badge">Wellness Tech · Live</span></div>
+        <div class="proj-name">Affirmare &nbsp;<span class="proj-badge">[Healthtech / Wellness] · Live</span></div>
         <div class="proj-stack">Flutter (iOS, Android) · React.js · WordPress</div>
+        <div class="proj-meta">Role: TPM &nbsp;|&nbsp; Team: 4 &nbsp;|&nbsp; ~6 months</div>
         <ul class="blist">
-          <li>AI wellness app — personalised affirmations &amp; music-based relaxation.</li>
-          <li>Subscription monetisation and multi-instrument music generation.</li>
-          <li>Resolved device overheating via in-house performance solution.</li>
+          <li>AI wellness app — personalised affirmations and music-based relaxation with subscription monetisation.</li>
+          <li>Resolved device overheating via in-house performance solution; coordinated 3 parallel workstreams to schedule.</li>
         </ul>
       </div>
 
       <div>
-        <div class="proj-name">ZUMI &nbsp;<span class="proj-badge">Veterinary Marketplace · Live</span></div>
+        <div class="proj-name">ZUMI &nbsp;<span class="proj-badge">[Marketplace / Services] · Live</span></div>
         <div class="proj-stack">Native iOS &amp; Android · React.js (Admin)</div>
+        <div class="proj-meta">Role: TPM &nbsp;|&nbsp; Team: 3 &nbsp;|&nbsp; ~4 months</div>
         <ul class="blist">
           <li>Service marketplace connecting pet owners with veterinary professionals.</li>
-          <li>Redesigned payment onboarding, improving user conversion rates.</li>
+          <li>Led payment onboarding redesign — improved user conversion through structured UX milestone planning.</li>
         </ul>
       </div>
 
-      <div style="margin-top:6pt;">
-        <div class="proj-name">Zenful-Note &nbsp;<span class="proj-badge">Mental Health · Live</span></div>
+      <div style="margin-top:5pt;">
+        <div class="proj-name">Zenful-Note &nbsp;<span class="proj-badge">[Mental Health SaaS] · Live</span></div>
         <div class="proj-stack">Native iOS &amp; Android · React.js (Admin Panel)</div>
+        <div class="proj-meta">Role: TPM &nbsp;|&nbsp; Team: 4 &nbsp;|&nbsp; ~5 months</div>
         <ul class="blist">
           <li>Mindfulness app delivered across 3 parallel workstreams simultaneously.</li>
-          <li>In-app purchase integration and self-reflection feature rollout on schedule.</li>
+          <li>In-app purchase integration and self-reflection feature rollout completed on schedule.</li>
         </ul>
       </div>
 
-      <div style="margin-top:6pt;">
-        <div class="proj-name">Nithasab &nbsp;<span class="proj-badge">Fintech · In Review</span></div>
+      <div style="margin-top:5pt;">
+        <div class="proj-name">Nithasab &nbsp;<span class="proj-badge">[Fintech] · In Review</span></div>
         <div class="proj-stack">FlutterFlow · Firebase · iOS &amp; Android</div>
+        <div class="proj-meta">Role: TPM &nbsp;|&nbsp; Team: 3 &nbsp;|&nbsp; ~3 months</div>
         <ul class="blist">
-          <li>Pre-registration platform with referral system &amp; Firebase backend integration.</li>
-          <li>Drove pre-launch user acquisition strategy ahead of release.</li>
+          <li>Pre-registration platform with referral system and Firebase backend integration.</li>
+          <li>Coordinated pre-launch user acquisition strategy and stakeholder sign-off ahead of submission.</li>
         </ul>
       </div>
 
-      <div style="margin-top:6pt;">
-        <div class="proj-name">Project Tracker Tool &nbsp;<span class="proj-badge">Personal Build · Live</span></div>
+    </div>
+
+    <!-- PERSONAL PROJECTS -->
+    <div class="sec-head" style="margin-top:7pt;">Personal Projects</div>
+    <span class="usep-long">_______________________________________________________________________</span>
+
+    <div class="proj-grid">
+      <div>
+        <div class="proj-name">Project Tracker Tool &nbsp;<span class="proj-badge">Self-built · Personal project</span></div>
         <div class="proj-stack">React.js · Node.js · Gemini Flash (AI)</div>
         <ul class="blist">
           <li>Full-stack AI project tracking app for task management and team coordination.</li>
           <li>Gemini AI integration for intelligent reporting and decision-making automation.</li>
-          <li><a class="proj-link" href="https://baljeet-68.github.io/baljeet-68.project_tracker.io/login" target="_blank">baljeet-68.github.io/project-tracker ↗</a></li>
+          <li><a class="proj-link" href="https://baljeet-68.github.io/baljeet-68.project_tracker.io/login" target="_blank">baljeet-68.github.io/project-tracker</a></li>
         </ul>
       </div>
-
-      <div style="margin-top:6pt;">
-        <div class="proj-name">Web &amp; Mobile Builds &nbsp;<span class="proj-badge">AI-Assisted Dev</span></div>
-        <div class="proj-stack">HTML · CSS · JavaScript · FlutterFlow · Claude Code</div>
+      <div>
+        <div class="proj-name">Portfolio &amp; Resume Site &nbsp;<span class="proj-badge">Self-built · Personal project</span></div>
+        <div class="proj-stack">HTML · CSS · JavaScript · Claude Code</div>
         <ul class="blist">
-          <li>Independently built and shipped web pages and mobile app interfaces.</li>
-          <li>Direct hands-on contribution to product delivery using Claude Code.</li>
+          <li>Designed and shipped personal portfolio and interactive HTML resume using AI-assisted development.</li>
+          <li><a class="proj-link" href="https://baljeet-68.github.io" target="_blank">baljeet-68.github.io</a></li>
         </ul>
       </div>
-
     </div>
 
-    <!-- PREVIOUS EXPERIENCE -->
-    <div class="sec-head" style="margin-top:10pt;">Previous Experience</div>
+    <!-- PREVIOUS EXPERIENCE — MANUFACTURING -->
+    <div class="sec-head" style="margin-top:7pt;">Previous Experience — Manufacturing Operations</div>
     <span class="usep-long">_______________________________________________________________________</span>
+    <p class="mfg-intro">Early career in manufacturing PMO roles — production planning, shift coordination, and operational excellence — foundation for transition into IT project management.</p>
 
-    <div class="prev-row">
-      <div>
-        <div class="prev-role">Shift In-Charge</div>
-        <div class="prev-co">Mittal Coin Pvt. Ltd., Pithampur (Indore, M.P.)</div>
+    <div class="job">
+      <div class="job-top">
+        <span class="job-company">Mittal Coin Pvt. Ltd., &nbsp;Pithampur (Indore, M.P.)</span>
+        <span class="job-date">Feb 2022 – Jun 2022</span>
       </div>
-      <div class="prev-date">Feb 2022 – Jun 2022</div>
+      <div class="role-row">
+        <span class="role-title">Shift In-Charge</span>
+      </div>
+      <ul class="blist">
+        <li>Planned and coordinated daily shift operations, tracking production output targets and resolving floor-level bottlenecks in real time.</li>
+        <li>Received 6-month performance increment for consistent delivery and team coordination.</li>
+      </ul>
     </div>
-    <div class="prev-row">
-      <div>
-        <div class="prev-role">Operational Excellence Engineer</div>
-        <div class="prev-co">Signet Industries Ltd., Pithampur (Indore, M.P.)</div>
+
+    <div class="job">
+      <div class="job-top">
+        <span class="job-company">Signet Industries Ltd., &nbsp;Pithampur (Indore, M.P.)</span>
+        <span class="job-date">Aug 2021 – Jan 2022</span>
       </div>
-      <div class="prev-date">Aug 2021 – Jan 2022</div>
+      <div class="role-row">
+        <span class="role-title">Operational Excellence Engineer</span>
+      </div>
+      <ul class="blist">
+        <li>Led Kaizen process improvement initiatives — coordinating cross-team root-cause analysis and implementing workflow changes that reduced downtime.</li>
+        <li>Tracked and reported operational KPIs; received 6-month performance increment for measurable efficiency gains.</li>
+      </ul>
     </div>
-    <div class="prev-row">
-      <div>
-        <div class="prev-role">Production Engineer</div>
-        <div class="prev-co">Kach Motors Pvt. Ltd., Pithampur (Indore, M.P.)</div>
+
+    <div class="job">
+      <div class="job-top">
+        <span class="job-company">Kach Motors Pvt. Ltd., &nbsp;Pithampur (Indore, M.P.)</span>
+        <span class="job-date">Jun 2018 – Aug 2021</span>
       </div>
-      <div class="prev-date">Jun 2018 – Aug 2021</div>
+      <div class="role-row">
+        <span class="role-title">Production Engineer</span>
+      </div>
+      <ul class="blist">
+        <li>Managed production scheduling and line coordination across a 3-year tenure, ensuring daily output targets and quality compliance.</li>
+        <li>Coordinated with vendors and internal teams on material flow, production planning, and quality documentation.</li>
+      </ul>
     </div>
 
   </main>
@@ -556,15 +563,12 @@
   <!-- ── Page 2 · Right Sidebar ── -->
   <aside class="sidebar" style="padding-top:10mm;">
 
-    <!-- EDUCATION -->
     <div class="sb-head" style="margin-top:0;">Education</div>
     <span class="sb-sep">__________________________</span>
     <div class="edu-inst">Vindhya Institute of Technology &amp; Science</div>
     <div class="edu-deg">B.E. – Mechanical Engineering</div>
-    <div class="edu-meta">Indore, India &nbsp;·&nbsp; 2013 – 2018<br>CGPA: 6.56</div>
+    <div class="edu-meta">Indore, India &nbsp;·&nbsp; 2013 – 2018</div>
 
-    <!-- CERTIFICATION -->
-    <!-- PORTFOLIO -->
     <div class="sb-head">Portfolio</div>
     <span class="sb-sep">__________________________</span>
     <div class="port-item">
@@ -576,13 +580,6 @@
       <div class="port-stack">React.js · Node.js · Gemini AI</div>
       <a class="port-link" href="https://baljeet-68.github.io/baljeet-68.project_tracker.io/login" target="_blank">baljeet-68.github.io/<br>project-tracker</a>
     </div>
-
-    <!-- LANGUAGES (repeated for page 2 accessibility) -->
-    <div class="sb-head">Languages</div>
-    <span class="sb-sep">__________________________</span>
-    <div class="cert-item">Punjabi — Native</div>
-    <div class="cert-item">Hindi — Native</div>
-    <div class="cert-item">English — Professional Working</div>
 
   </aside>
 </div><!-- /page 2 -->
