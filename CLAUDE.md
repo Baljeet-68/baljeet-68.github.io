@@ -1,10 +1,14 @@
 # Project Memory — Baljeet Singh Saini Resume & Portfolio
 
+## STANDING RULES — Always Follow
+- **Push after every task** — every edit, no matter how small, must end with `git add → git commit → git push origin HEAD:main`
+- **Branch mismatch** — local branch is `master`, remote is `main` — always push with `git push origin HEAD:main`
+- **Update CLAUDE.md** whenever something significant changes (URLs, files, status, open items)
+
 ## Repository
 - **Local path:** `E:\resume\html resume\`
 - **GitHub:** `https://github.com/Baljeet-68/baljeet-68.github.io`
 - **Live site:** `https://baljeet-68.github.io/` (user page — repo renamed from baljeet-68.portfolio.io)
-- **Branch mismatch:** local branch is `master`, remote is `main` — always push with `git push origin HEAD:main`
 
 ## File Map
 | File | Purpose |
