@@ -2,8 +2,8 @@
 
 ## Repository
 - **Local path:** `E:\resume\html resume\`
-- **GitHub:** `https://github.com/Baljeet-68/baljeet-68.portfolio.io`
-- **Live site:** `https://baljeet-68.github.io/baljeet-68.portfolio.io/`
+- **GitHub:** `https://github.com/Baljeet-68/baljeet-68.github.io`
+- **Live site:** `https://baljeet-68.github.io/` (user page — repo renamed to baljeet-68.github.io)
 - **Branch mismatch:** local branch is `master`, remote is `main` — always push with `git push origin HEAD:main`
 
 ## File Map
