@@ -85,7 +85,7 @@
 ## Open Items / Future Work
 - `og-preview.png` — OG image for LinkedIn/WhatsApp preview not yet created; add a screenshot of portfolio and commit as `og-preview.png` to repo root
 - `robots.txt` — ✅ created at repo root (allows all, references sitemap)
-- Google Search Console — ✅ verification tag added; verification tag: `TaSzTuEU2JvgragWP77fNUX98nRBn1Fe7da5Vx33BF8`
+- Google Search Console — ✅ verified; meta tag: `8Qie4N7quKhg61n52eUF1viOC6CJx1Wb21AiYbmhswI`
 - Point 55 (resume checklist) — no e-commerce client project added yet (user to provide real project name)
 - PSM-1 certification — optional, add to Certifications when completed
 
