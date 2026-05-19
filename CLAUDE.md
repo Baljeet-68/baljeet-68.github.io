@@ -111,11 +111,26 @@
 - PSM-1 certification — optional, add to Certifications when completed
 - Sitemap resubmission — delete old `/sitemap.xml` in Search Console, resubmit as `sitemap.xml`
 
+## Resume (index.html) — Current Font Sizes
+| Element | Size |
+|---------|------|
+| Name heading | 23pt |
+| Job title | 10.5pt |
+| Section heading | 9.5pt |
+| Summary / body text | 9.3pt |
+| Bullet list items | 9pt |
+| Company / role title | 10pt / 9.5pt |
+| Sidebar contact row | 8.8pt |
+| Skill tags | 8.5pt |
+| Project name | 9.3pt |
+| Education inst | 9pt |
+
 ## Commit History (recent)
+- `a51b360` — Resume: increase all font sizes by 1pt
+- `991d5e4` — CLAUDE.md: add standing rule — push after every task
 - `6b4896a` — Update all URLs after repo rename to baljeet-68.github.io
 - `84780e0` — Add sitemap.xml
 - `b68ed84` — Add Google Search Console HTML verification file
 - `4b8f2c4` — Update Google Search Console verification meta tag
 - `160c4e5` — Add resume PDF for portfolio download button
 - `06794a8` — Portfolio 22-point overhaul + resume content sync from PDF
-- `b04a04d` — Promote v2 resume and new portfolio as main pages
