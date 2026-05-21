@@ -137,7 +137,7 @@ Major content overhaul triggered by recruiter-audit. Visual design (orange / two
 - Page 2 sidebar replaced with Delivery Snapshot metrics block + Online links
 
 ## Commit History (recent)
-- `<pending>` — Resume: brutal-audit rebuild — metric-loaded positioning, CAR projects, restructured skills
+- `958f1dd` — Resume: brutal-audit rebuild — metric-loaded positioning + CAR projects
 - `a51b360` — Resume: increase all font sizes by 1pt
 - `991d5e4` — CLAUDE.md: add standing rule — push after every task
 - `6b4896a` — Update all URLs after repo rename to baljeet-68.github.io
