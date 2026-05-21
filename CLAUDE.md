@@ -10,21 +10,28 @@
 - **GitHub:** `https://github.com/Baljeet-68/baljeet-68.github.io`
 - **Live site:** `https://baljeet-68.github.io/` (user page — repo renamed from baljeet-68.portfolio.io)
 
-## File Map
-| File | Purpose |
-|------|---------|
-| `index.html` | Main resume (print-ready, A4, formerly baljeet_resume_v2.html) |
-| `portfolio.html` | Portfolio site (formerly baljeet-portfolio.html) |
-| `Baljeet_Singh_Saini_Resume.pdf` | Downloadable PDF resume (linked from portfolio nav) |
-| `sitemap.xml` | XML sitemap — submitted to Google Search Console |
-| `robots.txt` | Allows all crawlers, references sitemap |
-| `googlec868ea36d97c9bbc.html` | Google Search Console HTML verification file |
-| `baljeet_resume_v1.html` | Old resume — preserved, do NOT delete |
-| `baljeet-portfolio-old.html` | Old portfolio — preserved, do NOT delete |
-| `baljeet_resume_v2.html` | Source v2 resume — preserved |
-| `baljeet-portfolio.html` | Source portfolio — preserved |
+## File Map — URL SWAP 2026-05-21
+**Files were swapped: portfolio is now the homepage; resume is at `/resume.html`.**
 
-## Resume (index.html) — Key Design Decisions
+| File | URL | Purpose |
+|------|-----|---------|
+| `index.html` | `baljeet-68.github.io/` | **Portfolio site (homepage)** — Three.js hero, full marketing page |
+| `resume.html` | `baljeet-68.github.io/resume.html` | **Print-ready HTML resume** (A4, two-column orange/cream) |
+| `Baljeet_Singh_Saini_Resume.pdf` | `/Baljeet_Singh_Saini_Resume.pdf` | Downloadable PDF resume — must be regenerated from `resume.html` after every resume edit (see PDF Regeneration below) |
+| `sitemap.xml` | `/sitemap.xml` | XML sitemap (currently: `/` + `/resume.html`) |
+| `robots.txt` | `/robots.txt` | Allows all crawlers, references sitemap |
+| `googlec868ea36d97c9bbc.html` | `/googlec868ea36d97c9bbc.html` | Google Search Console HTML verification file |
+
+Legacy files (`baljeet_resume_v1.html`, `baljeet_resume_v2.html`, `baljeet-portfolio.html`, `baljeet-portfolio-old.html`) were DELETED on 2026-05-21 per user request.
+
+## PDF Regeneration — IMPORTANT
+After any edit to `resume.html`, regenerate the PDF so the portfolio's Download Resume button serves the latest content. PowerShell (Windows, Chrome):
+```powershell
+& "C:\Program Files\Google\Chrome\Application\chrome.exe" --headless=new --disable-gpu --no-pdf-header-footer --print-to-pdf="E:\resume\html resume\Baljeet_Singh_Saini_Resume.pdf" --virtual-time-budget=5000 "file:///E:/resume/html resume/resume.html"
+```
+Commit the regenerated PDF alongside the resume edit.
+
+## Resume (resume.html) — Key Design Decisions
 - **Fonts:** body → Times New Roman, headings → Cambria (system fonts, no Google Fonts import)
 - **Line-height:** 1.15 across all content classes (minimum spacing)
 - **Professional Summary:** `text-align: justify`
@@ -39,7 +46,7 @@
 }
 ```
 
-### Sections in index.html (in order)
+### Sections in resume.html (in order)
 1. Header / Contact
 2. Professional Summary
 3. Core Competencies
@@ -52,7 +59,7 @@
 10. Education — B.E. Mechanical, Vindhya Institute, 2013–2018
 11. Languages
 
-## Portfolio (portfolio.html) — Key Design Decisions
+## Portfolio (index.html) — Key Design Decisions
 - **Stack:** Three.js hero canvas, Fraunces (display), Outfit (sans), JetBrains Mono
 - **Colors:** accent `#C85A00` (warm orange), bg white/cream, ink near-black
 - **Features:** Custom cursor, magnetic buttons, scroll reveals, testimonials carousel, preloader
@@ -69,7 +76,7 @@
 - Logo | About · Skills · Experience · Projects · Contact | Resume PDF ↓ | Let's Talk
 - `Resume PDF ↓` links to `Baljeet_Singh_Saini_Resume.pdf` (download attribute)
 
-### Meta / SEO in portfolio.html
+### Meta / SEO in index.html (portfolio)
 - Title: `Baljeet Singh Saini | Technical Project Manager Portfolio`
 - Meta description: "Baljeet Singh Saini — Technical Project Manager with 3+ years in IT delivery..."
 - OG tags: og:url → `https://baljeet-68.github.io/`, og:image → `https://baljeet-68.github.io/og-preview.png`
@@ -98,10 +105,10 @@
 
 ## SEO & Discoverability Status
 - ✅ Google Search Console verified (HTML tag method)
-- ✅ Verification meta tag in portfolio.html + index.html: `8Qie4N7quKhg61n52eUF1viOC6CJx1Wb21AiYbmhswI`
+- ✅ Verification meta tag in index.html + resume.html: `8Qie4N7quKhg61n52eUF1viOC6CJx1Wb21AiYbmhswI`
 - ✅ HTML verification file: `googlec868ea36d97c9bbc.html`
 - ✅ robots.txt: allows all, sitemap referenced
-- ✅ sitemap.xml: 3 URLs (root, index.html, portfolio.html)
+- ✅ sitemap.xml: 2 URLs (root → portfolio, /resume.html → resume) — resubmit to Google Search Console after URL swap
 - ✅ Indexing requested via URL Inspection
 - ⏳ Sitemap submission in Search Console — resubmit as `sitemap.xml` after repo rename
 
@@ -111,7 +118,7 @@
 - PSM-1 certification — optional, add to Certifications when completed
 - Sitemap resubmission — delete old `/sitemap.xml` in Search Console, resubmit as `sitemap.xml`
 
-## Resume (index.html) — Current Font Sizes
+## Resume (resume.html) — Current Font Sizes
 | Element | Size |
 |---------|------|
 | Name heading | 23pt |
@@ -136,7 +143,19 @@ Major content overhaul triggered by recruiter-audit. Visual design (orange / two
 - Manufacturing section compressed; Silver Coin / Kaizen / 6-mo increments folded into mfg intro, removed from top Awards
 - Page 2 sidebar replaced with Delivery Snapshot metrics block + Online links
 
+## URL Swap + Legacy Cleanup — 2026-05-21
+- `portfolio.html` renamed to `index.html` — portfolio is now the homepage at `baljeet-68.github.io/`
+- Old `index.html` (resume) renamed to `resume.html` — resume now lives at `baljeet-68.github.io/resume.html`
+- Portfolio hero CTA row now has 3 buttons: Download Resume (PDF) · View Resume (HTML) · Let's Talk
+- PDF regenerated from updated `resume.html` via headless Chrome
+- Legacy files deleted: `baljeet_resume_v1.html`, `baljeet_resume_v2.html`, `baljeet-portfolio.html`, `baljeet-portfolio-old.html`
+- sitemap.xml updated; OG urls updated; all internal cross-links updated
+
 ## Commit History (recent)
+- `<pending>` — Swap URLs (portfolio → /, resume → /resume.html) + regenerate PDF + delete legacy files
+- `a20da8a` — Fix portfolio links — root URL serves resume, not portfolio
+- `c0c347e` — Portfolio: sync positioning to new resume + prominent Download Resume CTA
+- `d51f0a5` — CLAUDE.md: record commit hash for resume rebuild
 - `958f1dd` — Resume: brutal-audit rebuild — metric-loaded positioning + CAR projects
 - `a51b360` — Resume: increase all font sizes by 1pt
 - `991d5e4` — CLAUDE.md: add standing rule — push after every task
