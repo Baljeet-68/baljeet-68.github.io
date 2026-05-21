@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baljeet Singh Saini | Technical Project Manager Portfolio</title>
+  <title>Baljeet Singh Saini | Technical Program Manager — International Delivery</title>
   <meta name="description"
-    content="Baljeet Singh Saini — Technical Project Manager with 3+ years in IT delivery, leading mobile, web, and SaaS programs across global clients." />
+    content="Baljeet Singh Saini — Technical Program Manager delivering mobile, web & e-commerce products for US, UK, Europe & APAC clients. 40+ products shipped · 10–15 concurrent programs · 95% on-time · +20% CSAT." />
 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='14' fill='%23001f5b'/><text x='50' y='67' font-family='Georgia,serif' font-size='40' font-weight='bold' fill='white' text-anchor='middle'>BS</text></svg>">
@@ -16,15 +16,15 @@
 
   <!-- Open Graph / LinkedIn / WhatsApp -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Baljeet Singh Saini | Technical Project Manager Portfolio" />
-  <meta property="og:description" content="Technical Project Manager with 3+ years in IT delivery — leading mobile, web, and SaaS programs across global clients. 40+ products shipped. 95% on-time delivery." />
+  <meta property="og:title" content="Baljeet Singh Saini | Technical Program Manager — International Delivery" />
+  <meta property="og:description" content="Technical Program Manager delivering mobile, web & e-commerce products for US, UK, Europe & APAC clients. 40+ products shipped · 10–15 concurrent programs · 95% on-time · +20% CSAT." />
   <meta property="og:url" content="https://baljeet-68.github.io/" />
   <meta property="og:image" content="https://baljeet-68.github.io/og-preview.png" />
   <meta property="og:site_name" content="Baljeet Singh Saini Portfolio" />
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Baljeet Singh Saini | Technical Project Manager Portfolio" />
-  <meta name="twitter:description" content="Technical Project Manager with 3+ years in IT delivery — leading mobile, web, and SaaS programs across global clients." />
+  <meta name="twitter:title" content="Baljeet Singh Saini | Technical Program Manager — International Delivery" />
+  <meta name="twitter:description" content="Technical Program Manager · International Delivery (US · UK · EU · APAC). 40+ products shipped · 10–15 concurrent programs · 95% on-time · +20% CSAT." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -434,6 +434,87 @@
       gap: clamp(24px, 4vw, 50px);
       font-family: var(--mono);
       flex-wrap: wrap
+    }
+
+    .hero-cta-row {
+      display: flex;
+      gap: 14px;
+      margin-top: clamp(28px, 4vw, 44px);
+      flex-wrap: wrap;
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .8s ease .35s, transform .8s ease .35s;
+    }
+
+    .hero-tagline.in .hero-cta-row {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      padding: 16px 26px;
+      border: 1px solid var(--accent);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+      cursor: pointer;
+    }
+
+    .hero-cta-primary {
+      background: var(--accent);
+      color: var(--bg-0);
+    }
+
+    .hero-cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -12px rgba(200, 90, 0, .55);
+    }
+
+    .hero-cta-ghost {
+      background: transparent;
+      color: var(--ink-0);
+      border-color: currentColor;
+    }
+
+    .hero-cta-ghost:hover {
+      background: var(--ink-0);
+      color: var(--bg-0);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta .hero-cta-meta {
+      font-size: 10px;
+      letter-spacing: .18em;
+      opacity: .65;
+      padding-left: 12px;
+      border-left: 1px solid currentColor;
+    }
+
+    .hero-cta .hero-cta-arrow {
+      font-family: var(--display);
+      font-size: 16px;
+      letter-spacing: 0;
+      transition: transform .25s ease;
+    }
+
+    .hero-cta-primary:hover .hero-cta-arrow {
+      transform: translateY(3px);
+    }
+
+    .hero-cta-ghost:hover .hero-cta-arrow {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 640px) {
+      .hero-cta { padding: 14px 20px; font-size: 11px; gap: 10px; }
+      .hero-cta .hero-cta-meta { display: none; }
     }
 
     .hero-stats .stat-num {
@@ -1570,28 +1651,44 @@
         <span class="row"><span class="row-inner"><em>Singh</em><span class="uline">Saini.</span></span></span>
       </h1>
 
-      <div class="hero-role" id="heroRole">Technical Project Manager&nbsp;&nbsp;·&nbsp;&nbsp;Agile Delivery&nbsp;&nbsp;·&nbsp;&nbsp;SaaS, Mobile &amp; Web</div>
+      <div class="hero-role" id="heroRole">Technical Program Manager&nbsp;&nbsp;·&nbsp;&nbsp;International Delivery&nbsp;&nbsp;·&nbsp;&nbsp;US · UK · Europe · APAC</div>
 
       <div class="hero-tagline" id="heroTagline">
         <p>
-          Technical Project Manager with <span class="hl">3+ years in IT delivery</span>, leading cross-functional teams across
-          <span class="hl">mobile, web &amp; SaaS</span> platforms for clients across the
-          <span class="hl">US, UK, Canada, Europe &amp; APAC</span>. Promoted to TPM within the first year. Twenty-plus engineers led.
-          Forty-plus products shipped.
+          Delivering <span class="hl">mobile, web &amp; e-commerce</span> products for international clients across the
+          <span class="hl">US, UK, Europe &amp; APAC</span>. <span class="hl">40+ products shipped</span>,
+          <span class="hl">10–15 concurrent programs</span>, <span class="hl">95% on-time</span>, and a measured
+          <span class="hl">+20% YoY client CSAT lift</span>. Promoted from QA to TPM within the first year on delivery merit.
         </p>
         <div class="hero-stats">
-          <div>
-            <div class="stat-num" data-count="95" data-suffix="">0</div>
-            <div class="stat-lbl">% On-Time Delivery</div>
-          </div>
           <div>
             <div class="stat-num" data-count="40" data-suffix="+">0</div>
             <div class="stat-lbl">Products Shipped</div>
           </div>
           <div>
+            <div class="stat-num" data-count="95" data-suffix="%">0</div>
+            <div class="stat-lbl">On-Time Delivery</div>
+          </div>
+          <div>
             <div class="stat-num" data-count="20" data-suffix="+">0</div>
             <div class="stat-lbl">Engineers Led</div>
           </div>
+          <div>
+            <div class="stat-num" data-count="20" data-prefix="+" data-suffix="%">0</div>
+            <div class="stat-lbl">YoY Client CSAT</div>
+          </div>
+        </div>
+
+        <div class="hero-cta-row">
+          <a href="Baljeet_Singh_Saini_Resume.pdf" class="hero-cta hero-cta-primary" download>
+            <span class="hero-cta-label">Download Resume</span>
+            <span class="hero-cta-meta">PDF · 2 pages</span>
+            <span class="hero-cta-arrow" aria-hidden="true">↓</span>
+          </a>
+          <a href="mailto:Baljeetsaini.68@gmail.com" class="hero-cta hero-cta-ghost">
+            <span class="hero-cta-label">Let's Talk</span>
+            <span class="hero-cta-arrow" aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </div>
@@ -1601,18 +1698,18 @@
 
   <div class="marquee">
     <div class="marquee-track">
-      <div class="marquee-item">Agile Delivery</div>
-      <div class="marquee-item">QA Leadership</div>
-      <div class="marquee-item">AI-Assisted Development</div>
-      <div class="marquee-item">Stakeholder Management</div>
-      <div class="marquee-item">Scrum Execution</div>
-      <div class="marquee-item">Release Sign-Off</div>
-      <div class="marquee-item">Agile Delivery</div>
-      <div class="marquee-item">QA Leadership</div>
-      <div class="marquee-item">AI-Assisted Development</div>
-      <div class="marquee-item">Stakeholder Management</div>
-      <div class="marquee-item">Scrum Execution</div>
-      <div class="marquee-item">Release Sign-Off</div>
+      <div class="marquee-item">Program Management</div>
+      <div class="marquee-item">Agile · Scrum · Hybrid SDLC</div>
+      <div class="marquee-item">RAID &amp; Risk Governance</div>
+      <div class="marquee-item">Stakeholder &amp; Vendor Mgmt</div>
+      <div class="marquee-item">Release Sign-Off · UAT</div>
+      <div class="marquee-item">AI-Augmented Delivery</div>
+      <div class="marquee-item">Program Management</div>
+      <div class="marquee-item">Agile · Scrum · Hybrid SDLC</div>
+      <div class="marquee-item">RAID &amp; Risk Governance</div>
+      <div class="marquee-item">Stakeholder &amp; Vendor Mgmt</div>
+      <div class="marquee-item">Release Sign-Off · UAT</div>
+      <div class="marquee-item">AI-Augmented Delivery</div>
     </div>
   </div>
 
@@ -1623,24 +1720,27 @@
     <div class="about-grid">
       <div>
         <p class="about-lead reveal">
-          3+ years delivering mobile, web &amp; SaaS software for international clients —
-          with an <em>obsessive</em> bias toward predictability, quality, and people.
+          Delivering mobile, web &amp; e-commerce products for international clients across the
+          <em>US, UK, Europe &amp; APAC</em> — with an obsessive bias toward predictability, quality, and people.
         </p>
         <p class="about-body reveal">
           I started as a QA Engineer at MMF Infotech and was promoted to Technical Project Manager within
-          the first year — recognised for leadership and delivery ownership. Since then I've directed 40+ mobile,
-          web and e-commerce products, ran 10–15 concurrent programs at 95% on-time delivery, and led teams of
-          20+ engineers, designers and QA professionals across timezones.
+          the first year on delivery merit. Since then I've owned <strong style="color:var(--ink-0)">40+ production
+          releases</strong> across <strong style="color:var(--ink-0)">10–15 concurrent programs</strong> at
+          <strong style="color:var(--ink-0)">95% on-time delivery</strong>, lifting measured client
+          <strong style="color:var(--ink-0)">CSAT by 20% YoY</strong> while leading concurrent teams of
+          15–22 engineers, designers and QA across timezones.
         </p>
         <p class="about-body reveal">
-          Transitioned from engineering operations into technology delivery, bringing strong process discipline
-          and stakeholder management that most PM profiles lack. I'm Google Project Management certified, fluent
-          in Agile and Scrum, and hands-on with AI-assisted development — using Claude Code, Gemini and Notion AI
-          to ship faster, automate reporting, and prototype when timelines demand it.
+          A manufacturing PMO foundation (3+ years production planning, Kaizen, Operational Excellence) gives me
+          process discipline and vendor-governance instincts that most PM profiles lack. Google Project Management
+          certified, fluent in Agile · Scrum · Hybrid SDLC, and scaling AI-augmented delivery — using Claude,
+          Gemini and GPT for sprint reporting, RAID automation, and mid-sprint decision acceleration.
         </p>
         <p class="about-body reveal">
-          Skilled in <strong style="color:var(--ink-0)">Agile execution, SDLC, RAID management, stakeholder
-          governance, vendor management,</strong> and AI-assisted delivery.
+          Strongest in <strong style="color:var(--ink-0)">Program Management, RAID &amp; Risk Governance, Stakeholder
+          &amp; Vendor Management, Release Sign-Off,</strong> and <strong style="color:var(--ink-0)">AI-augmented
+          delivery workflows</strong>.
         </p>
       </div>
 
@@ -2009,13 +2109,14 @@
         els.forEach(el => {
           const target = +el.dataset.count;
           const suffix = el.dataset.suffix || '';
+          const prefix = el.dataset.prefix || '';
           const dur = 2000;
           const startTime = performance.now() + 1500;
           function step(now) {
             if (now < startTime) { requestAnimationFrame(step); return; }
             const p = Math.min((now - startTime) / dur, 1);
             const eased = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(target * eased) + suffix;
+            el.textContent = prefix + Math.round(target * eased) + suffix;
             if (p < 1) requestAnimationFrame(step);
           }
           requestAnimationFrame(step);
