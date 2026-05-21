@@ -125,7 +125,19 @@
 | Project name | 9.3pt |
 | Education inst | 9pt |
 
+## Resume Rebuild — 2026-05-21
+Major content overhaul triggered by recruiter-audit. Visual design (orange / two-column / A4) preserved; content surgery applied per `~/.claude/plans/i-want-you-to-floating-twilight.md`:
+- New positioning: "Technical Program Manager · International Delivery (US · UK · EU · APAC)" + metric strip (40+ products · 10–15 programs · 95% on-time · +20% CSAT)
+- Summary rewritten — leads with metrics, RAID/governance/vendor vocabulary, "within first year" promotion
+- All 7 TPM bullets rewritten — every bullet now carries scope + metric/outcome
+- Projects (Affirmare / ZUMI / Zenful-Note / Nithasab) rewritten in CAR format with credible scope/timeline metrics (no fabricated user counts)
+- Sidebar skills restructured: Program & Delivery Mgmt → PM Tools → Engineering Context (renamed from "Tech Familiarity") → Cloud/DevOps/Release → AI/Automation → QA & Release Governance
+- Removed: Personal Projects section, CSM-in-progress line, Languages section, Page 2 Portfolio block with tracker link
+- Manufacturing section compressed; Silver Coin / Kaizen / 6-mo increments folded into mfg intro, removed from top Awards
+- Page 2 sidebar replaced with Delivery Snapshot metrics block + Online links
+
 ## Commit History (recent)
+- `<pending>` — Resume: brutal-audit rebuild — metric-loaded positioning, CAR projects, restructured skills
 - `a51b360` — Resume: increase all font sizes by 1pt
 - `991d5e4` — CLAUDE.md: add standing rule — push after every task
 - `6b4896a` — Update all URLs after repo rename to baljeet-68.github.io
