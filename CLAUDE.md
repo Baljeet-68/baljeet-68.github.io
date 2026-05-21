@@ -152,7 +152,7 @@ Major content overhaul triggered by recruiter-audit. Visual design (orange / two
 - sitemap.xml updated; OG urls updated; all internal cross-links updated
 
 ## Commit History (recent)
-- `<pending>` — Swap URLs (portfolio → /, resume → /resume.html) + regenerate PDF + delete legacy files
+- `c0818f9` — Swap URLs (portfolio → /, resume → /resume.html) + regenerate PDF + delete legacy files
 - `a20da8a` — Fix portfolio links — root URL serves resume, not portfolio
 - `c0c347e` — Portfolio: sync positioning to new resume + prominent Download Resume CTA
 - `d51f0a5` — CLAUDE.md: record commit hash for resume rebuild
